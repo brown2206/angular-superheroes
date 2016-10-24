@@ -15,5 +15,11 @@
   <p>{{hero.comics}}</p>
   <p><img ng-src="{{hero.img_url}}"></p>
 </div>
+
+<div>
+  <input type="text" ng-model="vm.newHero">
+  <button ng-click="vm.addHero()">Add Superhero</button>
+  <p>User input: {{vm.newHero}}</p>
+</div>
 </body>
 </html>
