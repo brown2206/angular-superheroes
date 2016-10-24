@@ -20,6 +20,17 @@
   <input type="text" ng-model="vm.newHero">
   <button ng-click="vm.addHero()">Add Superhero</button>
   <p>User input: {{vm.newHero}}</p>
+
+  <table id="searchHeroResults">
+  <tr><th>Name</th><th>Phone</th><th>Comic</th></tr>
+  <tr ng-repeat="hero in vm.heroes | filter:vm.newHero">
+    <td>{{hero.name}}</td>
+    <td>{{hero.phone_number}}</td>
+    <td>{{hero.comics}}</td>
+    <td><img ng-src="{{hero.img_url}}"></td>
+  </tr>
+</table>
+
 </div>
 </body>
 </html>
