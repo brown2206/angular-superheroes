@@ -8,7 +8,12 @@
   <script src="app.js"></script>
 </head>
 <body ng-controller='heroesCtrl as vm'>
-
-
+<h2>Heroes</h2>
+<div ng-repeat='hero in vm.heroes'>
+  <p>{{$index +1}}. {{hero.name}}</p>
+  <p>{{hero.phone_number}}</p>
+  <p>{{hero.comics}}</p>
+  <p><img ng-src="{{hero.img_url}}"></p>
+</div>
 </body>
 </html>
